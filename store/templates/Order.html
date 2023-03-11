@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AddOrder</title>
+</head>
+<body>
+<p>This is Order page </p>
+      <form method="POST">
+          <fieldset>
+              {% csrf_token %}
+               {{ order_add_form | crispy }}
+          </fieldset>
+          <button>
+              Submit
+          </button>
+      </form>
+</body>
+</html>

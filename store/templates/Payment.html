@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PaymentForm</title>
+</head>
+<body>
+<p>This is Payment page </p>
+      <form method="POST">
+          <fieldset>
+              {% csrf_token %}
+               {{ payment_form | crispy }}
+          </fieldset>
+          <button>
+              Submit
+          </button>
+      </form>
+</body>
+</html>

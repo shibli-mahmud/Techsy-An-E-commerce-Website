@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReviewAdd</title>
+</head>
+<body>
+<p>This is Review page </p>
+      <form method="POST">
+          <fieldset>
+              {% csrf_token %}
+               {{ review_form | crispy }}
+          </fieldset>
+          <button>
+              Submit
+          </button>
+      </form>
+</body>
+</html>
